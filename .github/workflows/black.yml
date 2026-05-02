@@ -1,0 +1,14 @@
+# .github/workflows/black.yml
+name: Black Formatter Check
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  black:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: psf/black@v23.1.0  # versi VULNERABLE (sebelum 26.3.0)
+        with:
+          use_pyproject: true
